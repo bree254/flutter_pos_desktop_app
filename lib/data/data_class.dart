@@ -73,6 +73,24 @@ const productItems = [
   quantity: '150g',
   price: '\$7.75',
   imageurl: 'assets/ranch_burger.png',
+ ),
+ Products(
+  title: 'Pepperoni Pizza',
+  quantity: '150g',
+  price: '\$7.75',
+  imageurl: 'assets/ranch_burger.png',
+ ),
+ Products(
+  title: 'Pepperoni Pizza',
+  quantity: '150g',
+  price: '\$7.75',
+  imageurl: 'assets/ranch_burger.png',
+ ),
+ Products(
+  title: 'Pepperoni Pizza',
+  quantity: '150g',
+  price: '\$7.75',
+  imageurl: 'assets/ranch_burger.png',
  )
 
 ];
