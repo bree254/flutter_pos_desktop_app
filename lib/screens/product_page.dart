@@ -38,10 +38,10 @@ class ProductGrid extends StatelessWidget {
     return GridView.builder(
       itemCount: productItems.length,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 4, // Number of columns in the grid
-        mainAxisSpacing: 4.0, // Spacing between rows
-        crossAxisSpacing: 4.0, // Spacing between columns
-        childAspectRatio: 0.8, // Aspect ratio (width/height) of each grid item
+        crossAxisCount: 4,
+        mainAxisSpacing: 4.0,
+        crossAxisSpacing: 4.0,
+        childAspectRatio: 0.8,
       ),
       itemBuilder: (context, index) {
         final product = productItems[index];
@@ -71,15 +71,15 @@ class ProductItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 4, // Add elevation to create a shadow effect
+      elevation: 4,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(18), // Rounded corners for the card
+        borderRadius: BorderRadius.circular(18),
       ),
       child: Container(
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
           border: Border.all(
-            color: Colors.black12, // Outline color
+            color: Colors.black12,
           ),
           borderRadius: BorderRadius.circular(18),
         ),
@@ -152,27 +152,57 @@ class ProductPageInfo extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(teamName),
-            SizedBox(height: 10),
-            Text('Location ID #$locationId'),
+            Text(
+                teamName,
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold
+              ),
+            ),
+            SizedBox(height: 5),
+            Text(
+                'Location ID #$locationId',
+              style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                color: Colors.black54,
+              ),
+            ),
           ],
         ),
-        Spacer(), // Add space between columns
+        Spacer(),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Last Synced'),
-            SizedBox(height: 10),
-            Text(lastSynced),
+            Text(
+                'Last Synced',
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+                color: Colors.black54,
+              ),
+              
+            ),
+            SizedBox(height: 5),
+            Row(
+              children: [
+                Icon(
+                  Icons.fiber_manual_record,
+                  color: Colors.red,
+                  size: 16, // Adjust the size as needed
+                ),
+                Text(lastSynced),
+              ],
+            ),
           ],
         ),
-        SizedBox(width: 20), // Add space between columns
+        SizedBox(width: 20),
         Container(
           width: 80,
           height: 40,
           decoration: BoxDecoration(
-            color: Colors.grey[400], // Grey background color
-            borderRadius: BorderRadius.circular(20), // Rounded rectangle border
+            color: Colors.grey[300],
+            borderRadius: BorderRadius.circular(20),
             boxShadow: [
               BoxShadow(
                 color: Colors.grey.withOpacity(0.5), // Shadow color
@@ -205,12 +235,11 @@ class MenuTab extends StatefulWidget {
 }
 
 class _MenuTabState extends State<MenuTab> {
-  int selectedIndex = 0; // Initialize with the first tab (All Items) as active
+  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      // Set a fixed height for the container
       child: Row(
         children: List.generate(MenuItems.length, (index) {
           final item = MenuItems[index];

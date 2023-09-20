@@ -94,4 +94,31 @@ const productItems = [
  )
 
 ];
+class Order {
+ final String title;
+ final String image;
+ final double price;
+ int itemCount;
+
+ Order({
+  required this.title,
+  required this.image,
+  required this.price,
+  this.itemCount = 0,
+ });
+}
+List<Order> orders = [
+ Order(title: 'Item 1', image: 'assets/ranch_burger.png', price: 10.99),
+ Order(title: 'Item 2', image: 'assets/ranch_burger.png', price: 15.49),
+ Order(title: 'Item 1', image: 'assets/ranch_burger.png', price: 10.99),
+ Order(title: 'Item 2', image: 'assets/ranch_burger.png', price: 15.49),
+ Order(title: 'Item 1', image: 'assets/ranch_burger.png', price: 10.99),
+ Order(title: 'Item 2', image: 'assets/ranch_burger.png', price: 15.49),
+ Order(title: 'Item 1', image: 'assets/ranch_burger.png', price: 10.99),
+ Order(title: 'Item 2', image: 'assets/ranch_burger.png', price: 15.49),
+
+];
+
+
+
 

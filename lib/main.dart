@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Cashier App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -37,8 +37,9 @@ class Shell extends StatelessWidget {
     return  Scaffold(
       body: Row(
        children: [
-         ProductPage(),
-          OrdersPage(),
+         const ProductPage(),
+         Expanded(flex: 1, child: Container()),
+          const OrdersPage(),
        ],
       ),
     );
